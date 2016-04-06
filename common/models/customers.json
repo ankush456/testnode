@@ -1,0 +1,63 @@
+{
+  "name": "customers",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "ip": {
+      "type": "number",
+      "required": true
+    },
+    "latitude": {
+      "type": "number",
+      "required": true,
+      "postgresql": {
+        "columnName": "latitude",
+        "dataType": "double precision",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "longitude": {
+      "type": "number",
+      "required": true,
+      "postgresql": {
+        "columnName": "longitude",
+        "dataType": "double precision",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "created_at": {
+      "type": "date"
+    },
+    "updated_at": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
