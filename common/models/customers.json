@@ -6,9 +6,6 @@
     "validateUpsert": true
   },
   "properties": {
-    "id": {
-      "type": "number"
-    },
     "email": {
       "type": "string",
       "required": true
@@ -22,7 +19,7 @@
       "required": true
     },
     "ip": {
-      "type": "number",
+      "type": "string",
       "required": true
     },
     "latitude": {
