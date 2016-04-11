@@ -1,8 +1,64 @@
-<html>
-<head>
-	
-</head>
-<body>
-<h1>Hi</h1>
-</body>
+<!doctype html>
+<html ng-app="uiTest">
+  <head>
+    <meta charset="utf-8">
+    <title>uiTest</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="./bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="./app/index.scss"/>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ui-view></div>
+
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+     <script src="./bower_components/angular/angular.js"></script>
+     <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+     <script src="./bower_components/angular-animate/angular-animate.js"></script>
+     <script src="./bower_components/angular-material/angular-material.js"></script>
+     <script src="./bower_components/angular-toastr/dist/angular-toastr.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <script src="app/index.module.js"></script>
+    <script src="app/main/main.controller.js"></script>
+    <script src="app/components/app-popup/app-popup.js"></script>
+    <script src="app/components/common-services/my-services.js"></script>
+    <script src="app/components/dialog/create-customer/create-customer_controller.js"></script>
+    <script src="app/components/dialog/delete-dialog/delete-dialog_controller.js"></script>
+    <script src="app/components/dialog/update-customer/update-customer-dialog_controller.js"></script>
+    <script src="app/components/dialog/dialog_factory.js"></script>
+    <script src="app/index.module.js"></script>
+    <script src="app/index.run.js"></script>
+    <script src="app/index.route.js"></script>
+    <script src="app/index.constants.js"></script>
+    <script src="app/index.config.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  </body>
 </html>

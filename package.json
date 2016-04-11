@@ -1,5 +1,5 @@
 {
-  "name": "Customers",
+  "name": "customers",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
@@ -26,6 +26,6 @@
     "type": "",
     "url": ""
   },
-  "license": "UNLICENSED",
-  "description": "Customers"
+  "license": "unlinecesed",
+  "description": "customers"
 }

@@ -1,0 +1,77 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+      <span>Customers Data</span>
+      <!-- fill up the space between left and right area -->
+      <span flex></span>
+    </div>
+  </md-toolbar>
+
+
+<md-button class="md-fab md-fab-top-right margin-t-20" aria-label="Add" ng-click="main.createCustomer($event)">
+        <md-icon>add<md-icon>
+      </md-button>
+<md-content class="margin-box-20">
+
+  <table width="100%" class="customer-table">
+    <thead>
+      <tr>
+        <td>Email</td>
+        <td>Full Name</td>
+        <td>Ip</td>
+        <td>Latitude</td>
+        <td>Longtitude</td>
+        <td>Created At</td>
+        <td>Updated At</td>
+        <td>Actions</td>
+      </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="customer in main.customers">
+          <td>
+          {{customer.email}}
+          </td>
+          <td>
+          {{customer.first_name + " " + customer.last_name}}
+          </td>
+          <td>
+         {{customer.ip}}
+          </td>
+          <td>
+         {{customer.latitude}}
+          </td>
+          <td>
+         {{customer.longitude}}
+          </td>
+          <td>
+          {{customer.created_at | date:medium}}
+          </td>
+          <td>
+          {{customer.updated_at | date:medium}}
+          </td>
+           <td>
+           <md-button ng-click="main.updateCustomer($event,$index,customer)">
+           <md-tooltip>Edit</md-tooltip>
+          <md-icon>edit</md-icon>
+          </md-button>
+          <md-button ng-click="main.deleteCustomer($event,$index, customer.id)">
+          <md-tooltip>Delete</md-tooltip>
+          <md-icon>delete</md-icon>
+          </md-button>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+  <!-- <md-card>
+  <md-card-title class="pad-td-10">
+                <md-card-title-text>
+                  <span class=""></span>
+                  <span class="md-subhead"></span>
+                </md-card-title-text>
+                <md-card-title-text >
+                  <span class="md-subhead"layout="row" layout-align="end centre"></span>
+                </md-card-title-text>
+              </md-card-title>
+  </md-card> -->
+</md-content>  

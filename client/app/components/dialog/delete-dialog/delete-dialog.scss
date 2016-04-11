@@ -1,0 +1,12 @@
+.delete-popup-container {
+  md-dialog-content {
+    margin: 15px 10px 15px 18px;
+    p{
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    button {
+      margin-bottom: 0;
+    }
+  }
+}
