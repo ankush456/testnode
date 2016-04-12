@@ -10,10 +10,10 @@
 
   /* Code Under Test */
   $http.get('http://localhost:3000/customers/list')
-    .success(function(data, status, headers, config) {
+    .success(function(data) {
       $scope.valid = true;
       $scope.response = data;
-    }).error(function(data, status, headers, config) {
+    }).error(function() {
       $scope.valid = false;
   });
   /* End */
