@@ -24,38 +24,38 @@
         <p class="pad-t-10">Name :</p>
         <md-input-container  flex="auto">
         <label>First Name</label>
-        <input type="text"></input>
+        <input type="text" ng-model="customer.first_name"></input>
         </md-input-container>
         <md-input-container flex="auto">
         <label>Last Name</label>
-        <input type="text"></input>
+        <input type="text" ng-model="customer.last_name"></input>
         </md-input-container>
        </div>
 
-
+        
        <div layout="row" flex="auto">
         <p class="margin-r-10">Ip Address :</p>
         <md-input-container md-no-float class="pad-0 pad-t-10" flex="auto">
-        <input type="text" placeholder="Enter Ip Address"></input>
+        <input type="text" placeholder="Enter Ip Address" ng-model="customer.ip"></input>
         </md-input-container>
        </div>
 
        <div layout="row" flex="auto">
         <p class="margin-r-20">Latitude :</p>
         <md-input-container md-no-float class="pad-0 pad-t-10" flex="auto">
-        <input type="text" placeholder="Enter Latitude"></input>
+        <input type="text" placeholder="Enter Latitude" ng-model="customer.latitude"></input>
         </md-input-container>
        </div>
 
       <div layout="row" flex="auto">
         <p class="margin-r-10">Longitude :</p>
         <md-input-container md-no-float class="pad-0 pad-t-10" flex="auto">
-        <input type="text" placeholder="Enter Longitude"></input>
+        <input type="text" placeholder="Enter Longitude" ng-model="customer.longitude"></input>
         </md-input-container>
        </div>
-
-
-       </div>  
+       
+ <md-datepicker hide-sm hide-md hide-lg hide ng-model="customer.updated_at"></md-datepicker>
+              </div>  
 
 
        

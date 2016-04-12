@@ -5,7 +5,7 @@
     .factory('appPopupFactory', ['$mdToast',
       function($mdToast) {
         var toastDelayTime = 3000,
-          toastDirection = 'bottom right';
+          toastDirection = 'top left';
 
         var appPopupFactory = {};
 

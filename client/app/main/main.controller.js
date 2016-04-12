@@ -3,26 +3,22 @@
 
   angular
     .module('uiTest')
-    .controller('MainController', MainController);
+    .controller('mainController', mainController);
 
   /** @ngInject */
-  function MainController(myService,$scope,dialogFactory,appPopupFactory,$http) {
+  function mainController(myService,$scope,dialogFactory,appPopupFactory) {
     var vm = this;
-     $scope.newCustomer={};
 
-    this.getCustomer=function(){
+
+    vm.getCustomer=function(){
     	myService.getCustomers().then(function(data) {
-             vm.customers=data;
-             $scope.email=data.email;
-             $scope.first_name=data.first_name;
-             $scope.last_name=data.last_name;
-             $scope.ip=data.ip;
-             $scope.latitude=data.latitude;
-             $scope.longitude=data.longitude;
+             vm.customers=data.data;
+             console.log(vm.customers);
+
     	});
     }
 
-    this.getCustomer();
+    vm.getCustomer();
 
 
     vm.deleteCustomerFn = function() {
@@ -46,59 +42,24 @@
       });
     };
 
-
-     vm.updateCustomerFn = function() {
-      myService.updateCustomer( $scope.targetCustomer )
-        .then(function() {
-          vm.customers.splice($scope.currIndex, 1);
-          delete $scope.targetGoal;
-          appPopupFactory.showSimpleToast('Customer Deleted Successfully.');
-        });
-    };
     vm.updateCustomer = function(ev, index, customer) {
       $scope.targetCustomer = customer;
       $scope.currIndex = index;
       dialogFactory.showUpdateCustomerDialog({
         targetEvent: ev,
         locals: {
-          deleteConfirm: vm.updateCustomerFn,
           customer:customer
         }
       });
     };
 
-
-   vm.createCustomerFn = function() {
-   	$scope.newCustomer.email=$scope.email;
-    $scope.newCustomer.first_name=$scope.first_name;
-     $scope.newCustomer.last_name=$scope.last_name;
-      $scope.newCustomer.ip=$scope.ip;
-      $scope.newCustomer.latitude=$scope.latitude;
-       $scope.newCustomer.longitude=$scope.longitude;
-   	 $http({
-        method  : 'POST',
-        url     : 'http://localhost:3000/api/customers',
-        data    : $scope.newCustomer,  // pass in data as strings
-        headers : { 'Content-Type': 'application/json' }  // set the headers so angular passing info as form data (not request payload)
-      })
-        .success(function(data) {
-          appPopupFactory.showSimpleToast('Customer Created Successfully.');
-          console.log("OK");
-        })
-        .error(function(data, status, headers, config){
-        console.log(data);
-        console.log(status);
-      });
-    };
     vm.createCustomer = function(ev) {
+
       dialogFactory.showCreateCustomerDialog({
         targetEvent: ev,
-        locals: {
-          createConfirm: vm.createCustomerFn,
-        }
       });
     };
-  
+
 
   }
 

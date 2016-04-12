@@ -12,6 +12,7 @@
       </md-button>
 <md-content class="margin-box-20">
 
+<label layout="row"><b class="margin-r-10 pad-t-10">Search:</b><md-input-container md-no-float> <input placeholder="enter text to search" ng-model="searchText"></md-input-container></label>
   <table width="100%" class="customer-table">
     <thead>
       <tr>
@@ -42,11 +43,11 @@
           <td>
          {{customer.longitude}}
           </td>
-          <td>
-          {{customer.created_at | date:medium}}
+           <td>
+           {{customer.created_at | date:shortDate}}
           </td>
-          <td>
-          {{customer.updated_at | date:medium}}
+           <td>
+         {{customer.updated_at | date:shortDate}}
           </td>
            <td>
            <md-button ng-click="main.updateCustomer($event,$index,customer)">
@@ -74,4 +75,4 @@
                 </md-card-title-text>
               </md-card-title>
   </md-card> -->
-</md-content>  
+</md-content>

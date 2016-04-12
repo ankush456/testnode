@@ -1,5 +1,5 @@
-var array = [{Id:"1",FirstName:"subburaj",LastName:"rajendran",Email:"subbuvlb@gmail.com",DOB:"1989-02-19",Age:"26",Address:"xxx,yyy",PhoneNo:"9626678802"},
-             {Id:"2",FirstName:"kamal",LastName:"raj",Email:"kamal@gmail.com",DOB:"1989-03-19",Age:"26",Address:"aaa,bbb",PhoneNo:"9626667802"},]
+var array = [{id:"1",first_name:"subburaj",last_name:"rajendran",email:"subbuvlb@gmail.com",ip:"10.10.2.1",latitude:"100.66",longitude:"200.32",created_at:"2016-04-12T20:55:06.810Z",updated_at:"2016-04-12T20:55:06.810Z"},
+  {id:"2",first_name:"Ankush",last_name:"Verma",email:"ankush@gmail.com",ip:"10.30.2.1",latitude:"100.66",longitude:"200.32",created_at:"2016-04-12T20:55:06.810Z",updated_at:"2016-04-12T20:55:06.810Z"},]
 
 
 

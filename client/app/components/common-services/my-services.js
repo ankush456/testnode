@@ -12,11 +12,18 @@
           //and promise.then() also returns a promise
           //that resolves to whatever value is returned in it's
           //callback argument, we can return that.
-          return $http.get(BASE_URL+ '/api/customers')
+          return $http.get(BASE_URL+ '/customer/list')
             .then(function(result) {
             return result.data;
           });
         },
+
+        addCustomer:function (data) {
+           return $http.post(BASE_URL+ '/api/customers')
+            .then(function(result) {
+          });
+        },
+
         deleteCustomer:function(id){
           var param = [];
           if(Array.isArray(id)) {
@@ -24,12 +31,12 @@
           } else {
             param.push(id);
           }
-          return $http.delete(BASE_URL+'/api/customers/'+param)
+          return $http.delete(BASE_URL+'/customer/delete/'+param)
             .then (function(result){
 
             })
         },
-        
+
        updateCustomer:function(id,data){
           var param=id;
           return $http.put(BASE_URL+'/api/goals/'+param)

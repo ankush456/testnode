@@ -1,0 +1,273 @@
+/**
+ *  Do not remove the comment below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+/* Global Variables */
+/*
+* Layout (Margins and paddings)
+* Feel free to add any other classes which you think are related to layout
+*/
+.pad-0 {
+  padding: 0; }
+
+.pad-box-10 {
+  padding: 10px; }
+
+.pad-box-15 {
+  padding: 15px; }
+
+.pad-box-20 {
+  padding: 20px; }
+
+.pad-l-10 {
+  padding-left: 10px; }
+
+.pad-l-20 {
+  padding-left: 20px; }
+
+.pad-r-10 {
+  padding-right: 10px; }
+
+.pad-r-20 {
+  padding-right: 20px; }
+
+.pad-t-10 {
+  padding-top: 10px; }
+
+.pad-t-20 {
+  padding-top: 20px; }
+
+.pad-d-10 {
+  padding-bottom: 10px; }
+
+.pad-d-20 {
+  padding-bottom: 20px; }
+
+.pad-lr-10 {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.pad-lr-20 {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.pad-td-10 {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.pad-td-20 {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.margin-0 {
+  margin: 0; }
+
+.margin-box-10 {
+  margin: 10px; }
+
+.margin-box-20 {
+  margin: 20px; }
+
+.margin-l-10 {
+  margin-left: 10px; }
+
+.margin-l-20 {
+  margin-left: 20px; }
+
+.margin-r-10 {
+  margin-right: 10px; }
+
+.margin-r-20 {
+  margin-right: 20px; }
+
+.margin-t-10 {
+  margin-top: 10px; }
+
+.margin-t-20 {
+  margin-top: 20px; }
+
+.margin-d-10 {
+  margin-bottom: 10px; }
+
+.margin-d-20 {
+  margin-bottom: 20px; }
+
+.margin-td-10 {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.margin-td-20 {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.margin-lr-10 {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.margin-lr-20 {
+  margin-left: 20px;
+  margin-right: 20px; }
+
+/* mobile devices */
+@media (max-width: 599px) {
+  .pad-0 {
+    padding: 0; }
+
+  .pad-box-10 {
+    padding: 5px; }
+
+  .pad-box-20 {
+    padding: 10px; }
+
+  .pad-l-10 {
+    padding-left: 5px; }
+
+  .pad-l-20 {
+    padding-left: 10px; }
+
+  .pad-r-10 {
+    padding-right: 5px; }
+
+  .pad-r-20 {
+    padding-right: 10px; }
+
+  .pad-t-10 {
+    padding-top: 5px; }
+
+  .pad-t-20 {
+    padding-top: 10px; }
+
+  .pad-d-10 {
+    padding-bottom: 5px; }
+
+  .pad-d-20 {
+    padding-bottom: 10px; }
+
+  .pad-lr-10 {
+    padding-left: 5px;
+    padding-right: 5px; }
+
+  .pad-lr-20 {
+    padding-left: 10px;
+    padding-right: 10px; }
+
+  .pad-td-10 {
+    padding-top: 5px;
+    padding-bottom: 5px; }
+
+  .pad-td-20 {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+  .margin-0 {
+    margin: 0; }
+
+  .margin-box-10 {
+    margin: 5px; }
+
+  .margin-box-20 {
+    margin: 10px; }
+
+  .margin-l-10 {
+    margin-left: 10px; }
+
+  .margin-l-20 {
+    margin-left: 10px; }
+
+  .margin-r-10 {
+    margin-right: 5px; }
+
+  .margin-r-20 {
+    margin-right: 10px; }
+
+  .margin-t-10 {
+    margin-top: 5px; }
+
+  .margin-t-20 {
+    margin-top: 10px; }
+
+  .margin-d-10 {
+    margin-bottom: 5px; }
+
+  .margin-d-20 {
+    margin-bottom: 10px; }
+
+  .margin-td-10 {
+    margin-top: 5px;
+    margin-bottom: 5px; }
+
+  .margin-td-20 {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+
+  .margin-lr-10 {
+    margin-left: 5px;
+    margin-right: 5px; }
+
+  .margin-lr-20 {
+    margin-left: 10px;
+    margin-right: 10px; } }
+/* Global Variables */
+.delete-popup-container md-dialog-content {
+  margin: 15px 10px 15px 18px; }
+.delete-popup-container md-dialog-content p {
+  overflow: hidden;
+  white-space: nowrap; }
+.delete-popup-container md-dialog-content button {
+  margin-bottom: 0; }
+
+table, thead, td {
+  border: 1px solid black;
+  border-collapse: collapse; }
+
+thead, td {
+  padding: 5px; }
+
+.customer-table .md-button {
+  margin: 0;
+  line-height: 0;
+  min-height: 10px;
+  min-width: 50px; }
+
+thead {
+  font-weight: bold; }
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../libs/iconfont/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(../libs/iconfont/MaterialIcons-Regular.woff2)
+  format("woff2"), url(../libs/iconfont/MaterialIcons-Regular.woff) format("woff"),
+  url(../libs/iconfont/MaterialIcons-Regular.ttf) format("truetype"); }
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */

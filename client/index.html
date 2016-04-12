@@ -1,64 +1,53 @@
-<!doctype html>
-<html ng-app="uiTest">
-  <head>
-    <meta charset="utf-8">
-    <title>uiTest</title>
-    <meta name="description" content="">
+<!DOCTYPE html>
+<html>
+<head>
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css" />
-    <link rel="stylesheet" href="./bower_components/angular-toastr/dist/angular-toastr.css" />
-    <link rel="stylesheet" href="./app/index.scss"/>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <base href="/"></base>
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="libs/angular-material.min.css">
 
-    <!-- build:css({.tmp/serve,src}) styles/app.css -->
-    <!-- inject:css -->
-    <!-- css files will be automatically insert here -->
-    <!-- endinject -->
-    <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="libs/angular-toastr.min.css" />
+    <link rel="stylesheet" href="libs/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="app/index.css">
+    <link rel="stylesheet" type="text/css" href="app/components/css/variables.scss">
+    <link rel="stylesheet" type="text/css" href="app/components/css/layout.scss">
+    <link rel="stylesheet" type="text/css" href="app/components/dialog/delete-dialog/delete-dialog.scss">
+    <link rel="stylesheet" type="text/css" href="app/main/main.scss">
+  <!-- <link rel="stylesheet" href="../bower_components/toastr/toastr.css" /> -->
 
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="uiTest">
+
+<!-- MAIN CONTENT -->
+<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+<div class="container">
     <div ui-view></div>
+    <script src="libs/angular.min.js"></script>
+     <!-- Angular Material Dependencies -->
+    <script src="libs/angular-animate.min.js"></script>
+    <script src="libs/angular-aria.min.js"></script>
 
-    <!-- build:js(src) scripts/vendor.js -->
-    <!-- bower:js -->
-     <script src="./bower_components/angular/angular.js"></script>
-     <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-     <script src="./bower_components/angular-animate/angular-animate.js"></script>
-     <script src="./bower_components/angular-material/angular-material.js"></script>
-     <script src="./bower_components/angular-toastr/dist/angular-toastr.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
 
-    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
-    <!-- inject:js -->
-    <script src="app/index.module.js"></script>
-    <script src="app/main/main.controller.js"></script>
-    <script src="app/components/app-popup/app-popup.js"></script>
+    <!-- Angular Material Javascript now available via Google CDN; version 1.0.7 used here -->
+    <script src="libs/angular-material.min.js"></script>
+    <script src="libs/angular-material/angular-material.js"></script>
+
+     <script src="libs/angular-toastr.min.js"></script>
+    <script   src="libs/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="index.module.js"></script>
+    <script type="text/javascript" src="index.route.js"></script>
     <script src="app/components/common-services/my-services.js"></script>
-    <script src="app/components/dialog/create-customer/create-customer_controller.js"></script>
-    <script src="app/components/dialog/delete-dialog/delete-dialog_controller.js"></script>
-    <script src="app/components/dialog/update-customer/update-customer-dialog_controller.js"></script>
+    <script src="app/components/app-popup/app-popup.js"></script>
     <script src="app/components/dialog/dialog_factory.js"></script>
-    <script src="app/index.module.js"></script>
-    <script src="app/index.run.js"></script>
-    <script src="app/index.route.js"></script>
-    <script src="app/index.constants.js"></script>
-    <script src="app/index.config.js"></script>
-    <!-- endinject -->
+    <script src="app/components/dialog/create-customer/create-customer_controller.js"></script>
+  <script src="app/components/dialog/delete-dialog/delete-dialog_controller.js"></script>
+  <script src="app/components/dialog/update-customer/update-customer-dialog_controller.js"></script>
+    <script src="app/main/main.controller.js"></script>
+</div>
 
-    <!-- inject:partials -->
-    <!-- angular templates will be automatically converted in js and inserted here -->
-    <!-- endinject -->
-    <!-- endbuild -->
 
-  </body>
+</body>
 </html>
