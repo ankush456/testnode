@@ -2,14 +2,14 @@
   'use strict';
 
   describe('controllers', function(){
-    
+
      beforeEach(module('uiTest'));
    it('should demonstrate using expect (200 status)', inject(function($http,$httpBackend) {
-  
+
   var $scope = {};
 
   /* Code Under Test */
-  $http.get('http://localhost:3000/api/customers')
+  $http.get('http://localhost:3000/customers/list')
     .success(function(data, status, headers, config) {
       $scope.valid = true;
       $scope.response = data;
@@ -19,7 +19,7 @@
   /* End */
 
   $httpBackend
-    .expect('GET', 'http://localhost:3000/api/customers')
+    .expect('GET', 'http://localhost:3000/customers/list')
     .respond(200, { foo: 'bar' });
 
   expect($httpBackend.flush).not.toThrow();

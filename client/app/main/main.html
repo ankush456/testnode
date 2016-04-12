@@ -27,7 +27,7 @@
       </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="customer in main.customers">
+        <tr ng-repeat="customer in main.customers | filter:searchText">
           <td>
           {{customer.email}}
           </td>

@@ -7,7 +7,7 @@
 
 
   /** @ngInject */
-  function updateCustomerDialogController($scope, $mdDialog,customer,$http,appPopupFactory) {
+  function updateCustomerDialogController($scope, $mdDialog,customer,myService,appPopupFactory) {
 
     $scope.close = function() {
       $mdDialog.hide();
@@ -17,26 +17,19 @@
     };
 
     $scope.customer=customer;
-        $scope.customer.updated_at=new Date();
+    $scope.customer.updated_at=new Date();
+    var customer=$scope.customer;
+    var id=$scope.customer.id;
     $scope.confirm = function(){
-     var param=$scope.customer.id;
-      $scope.customer=customer;
-      $http({
-        method  : 'put',
-        url     : 'http://localhost:3000//customer/update/'+param,
-        //url     : 'http://10.0.1.64:3100/api/goals',
-        data    : $scope.customer,  // pass in data as strings
-        headers : { 'Content-Type': 'application/json' }  // set the headers so angular passing info as form data (not request payload)
-      })
-        .success(function() {
-          appPopupFactory.showSimpleToast('Customer Updated Successfully.');
-        })
-        .error(function(data, status){
-          console.log(data);
-          console.log(status);
-        });
+      var id=$scope.customer.id;
+      var customer=$scope.customer;
+      $scope.customer.updated_at=new Date();
+      myService.updateCustomer(id,customer)
+        .then(function() {
+        appPopupFactory.showSimpleToast('Customer Updated Successfully.');
+          $scope.close();
+      });
 
-      $scope.close();
     };
 
   }

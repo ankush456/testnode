@@ -18,9 +18,10 @@
           });
         },
 
-        addCustomer:function (data) {
-           return $http.post(BASE_URL+ '/api/customers')
-            .then(function(result) {
+        addCustomer:function (customer) {
+           return $http.post(BASE_URL+ '/customer/add',customer)
+            .then(function(results) {
+               return results;
           });
         },
 
@@ -37,12 +38,10 @@
             })
         },
 
-       updateCustomer:function(id,data){
-          var param=id;
-          return $http.put(BASE_URL+'/api/goals/'+param)
-            .then(function(result) {
-
-            });
+       updateCustomer:function(id,customer){
+          return $http.put(BASE_URL+'/customer/update/'+id,{customer:customer}).then(function (status) {
+           return status.data;
+         });
         }
 
 

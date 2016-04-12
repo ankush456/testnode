@@ -16,7 +16,7 @@
              console.log(vm.customers);
 
     	});
-    }
+    };
 
     vm.getCustomer();
 
@@ -56,7 +56,7 @@
     vm.createCustomer = function(ev) {
 
       dialogFactory.showCreateCustomerDialog({
-        targetEvent: ev,
+        targetEvent: ev
       });
     };
 

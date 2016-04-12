@@ -3,19 +3,24 @@
 
   angular
     .module('uiTest')
-    .config(config);
 
   /** @ngInject */
-  function config($logProvider, toastrConfig) {
-    // Enable log
-    $logProvider.debugEnabled(true);
+  .config(['$mdThemingProvider', function($mdThemingProvider) {
+    $mdThemingProvider.theme('default')
+      .primaryPalette('blue', {
+        'default': '400'
+      })
+      .accentPalette('teal', {
+        'default': '500'
+      });
 
-    // Set options third-party lib
-    toastrConfig.allowHtml = true;
-    toastrConfig.timeOut = 3000;
-    toastrConfig.positionClass = 'toast-top-right';
-    toastrConfig.preventDuplicates = true;
-    toastrConfig.progressBar = true;
-  }
+
+    $mdThemingProvider.theme('success');
+    $mdThemingProvider.theme('failure');
+    $mdThemingProvider.theme('warn');
+    $mdThemingProvider.theme('info');
+
+
+  }]);
 
 })();
