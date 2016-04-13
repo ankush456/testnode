@@ -4,7 +4,6 @@
   angular
     .module('uiTest')
     .service('myService', function($http) {
-   // var BASE_URL="http://10.0.1.226:3100";
     var BASE_URL="http://localhost:3000";
       return {
         getCustomers: function() {
