@@ -22,7 +22,7 @@
        $scope.formData.updated_at=new Date();
        myService.addCustomer(formData)
          .then(function() {
-           appPopupFactory.showSimpleToast('Customer Updated Successfully.');
+           appPopupFactory.showSimpleToast('Customer created Successfully.');
            $state.go($state.current, {}, {reload: true});
 
            $scope.close();
