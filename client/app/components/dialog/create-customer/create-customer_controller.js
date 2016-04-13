@@ -7,7 +7,7 @@
 
 
   /** @ngInject */
-  function createCustomerDialogController($scope, $mdDialog,myService,$http,$state,appPopupFactory) {
+  function createCustomerDialogController($scope, $mdDialog,myService,$state,appPopupFactory) {
 
     $scope.close = function() {
       $mdDialog.hide();
